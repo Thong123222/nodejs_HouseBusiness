@@ -1,9 +1,10 @@
 {
   "name": "housebusiness",
   "version": "1.0.0",
-  "main": "main.js",
+  "main": "src/main.js",
   "scripts": {
-    "start": "nodemon --inspect main.js",
+    "start": "nodemon --inspect src/main.js",
+    "watch": "node-sass --watch src/resources/scss/ --output src/public/css/ ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,9 +23,13 @@
   "homepage": "https://github.com/Thong123222/nodejs_HouseBusiness#readme",
   "description": "",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "express-handlebars": "^8.0.1",
+    "handlebars": "^4.7.8"
   },
   "devDependencies": {
+    "morgan": "^1.10.0",
+    "node-sass": "^9.0.0",
     "nodemon": "^3.1.4"
   }
 }
