@@ -1,1 +1,28 @@
-<h1>this is header</h1>
+<link rel="stylesheet" href="/css/header.css"/>
+<header class="container">
+    <ul class="left-side">
+        <li><a href=""><h1>Logo</h1></a></li>
+        <li class="nav-jobs">
+            <a href="">Việc Làm IT<i class="fa-solid fa-caret-down"></i></a>
+            <ul class="drop-down">
+                <li><a href="#">Thep cấp bậc</a></li>
+                <li><a href="">Theo địa điểm</a></li>
+                <li><a href="">Theo kỹ năng</a></li>
+            </ul>
+        </li>
+        <li><a href="">Công Ty IT</a></li>
+        <li class="nav-tools">
+            <a href="">Công Cụ<i class="fa-solid fa-caret-down"></i></a>
+            <ul class="drop-down">
+                <li><a href="">Tạo CV</a></li>
+                <li><a href="">Câu hỏi phỏng vấn</a></li>
+            </ul>
+        </li>
+        <li><a href="">Blog IT</a></li>
+    </ul>
+    <ul class="right-side">
+        <span><i class="fa-solid fa-phone"></i>039 9998 9998</span>
+        <button class="btn-recruitment">Nhà tuyển dụng</button>
+        <button class="btn-loggin">Đăng nhập</button>
+    </ul>
+</header>

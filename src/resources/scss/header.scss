@@ -1,0 +1,116 @@
+@import 'variables';
+
+header, .container, .container a, .container span, .container h1 {
+    color: white;
+    cursor: pointer;
+}
+
+.container {
+    height: 70px;
+    background-color: $primary-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15%;
+    font-weight: bold;
+    font-size: $font-size-primary;
+}
+
+.left-side {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.left-side li {
+    display: inline-block;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    transition: transform 1s ease-out;
+}
+
+.left-side li a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.left-side li ul.drop-down li {
+    display: block;
+    color: $primary-color;
+}
+
+.left-side li ul.drop-down {
+    width: 190px;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+.left-side li:hover ul.drop-down {
+    display: block;
+    background-color: $primary-color;
+}
+
+.right-side button {
+    padding: 8px 15px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-recruitment {
+    color: #2c60b4;
+    font-weight: bold;
+    background-color: white;
+}
+
+.btn-recruitment:hover {
+    background-color: hsl(0, 0%, 80%);
+}
+
+.btn-loggin {
+    color: #f6f6f6;
+    background-color: #1b4b97;
+    font-weight: bold;
+}
+
+.btn-loggin:hover {
+    background-color: hsl(217, 69%, 15%);
+}
+
+.right-side span {
+    margin-right: 20px;
+}
+
+.right-side span i {
+    margin-right: 10px;
+}
+
+.nav-jobs i, .nav-tools i {
+    margin-left: 5px;
+}
+
+.drop-down li a {
+    font-weight: normal;
+}
+
+.drop-down li a:hover {
+    background-color: $primary-color;
+}
+
+.nav-jobs:hover a {
+    background-color: hsl(217, 68%, 39%);
+}
+
+.nav-tools:hover a {
+    background-color: hsl(217, 68%, 39%);
+}
+
+.left-side li:hover a i {
+    transform: rotate(180deg);
+}

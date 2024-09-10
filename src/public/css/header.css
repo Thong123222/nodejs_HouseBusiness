@@ -1,0 +1,116 @@
+header, .container, .container a, .container span, .container h1 {
+  color: white;
+  cursor: pointer;
+}
+
+.container {
+  height: 70px;
+  background-color: #3b82f6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15%;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.left-side {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.left-side li {
+  display: inline-block;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  transition: transform 1s ease-out;
+}
+
+.left-side li a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+.left-side li ul.drop-down li {
+  display: block;
+  color: #3b82f6;
+}
+
+.left-side li ul.drop-down {
+  width: 190px;
+  position: absolute;
+  z-index: 999;
+  display: none;
+}
+
+.left-side li:hover ul.drop-down {
+  display: block;
+  background-color: #3b82f6;
+}
+
+.right-side button {
+  padding: 8px 15px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-recruitment {
+  color: #2c60b4;
+  font-weight: bold;
+  background-color: white;
+}
+
+.btn-recruitment:hover {
+  background-color: hsl(0, 0%, 80%);
+}
+
+.btn-loggin {
+  color: #f6f6f6;
+  background-color: #1b4b97;
+  font-weight: bold;
+}
+
+.btn-loggin:hover {
+  background-color: hsl(217, 69%, 15%);
+}
+
+.right-side span {
+  margin-right: 20px;
+}
+
+.right-side span i {
+  margin-right: 10px;
+}
+
+.nav-jobs i, .nav-tools i {
+  margin-left: 5px;
+}
+
+.drop-down li a {
+  font-weight: normal;
+}
+
+.drop-down li a:hover {
+  background-color: #3b82f6;
+}
+
+.nav-jobs:hover a {
+  background-color: hsl(217, 68%, 39%);
+}
+
+.nav-tools:hover a {
+  background-color: hsl(217, 68%, 39%);
+}
+
+.left-side li:hover a i {
+  transform: rotate(180deg);
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../resources/scss/header.scss%22,%22../../resources/scss/_variables.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAEA;EACI;EACA;;;AAGJ;EACI;EACA,kBCTY;EDUZ;EACA;EACA;EACA;EACA;EACA,WCdiB;;;ADiBrB;EACI;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA,OC3CY;;;AD8ChB;EACI;EACA;EACA;EACA;;;AAGJ;EACI;EACA,kBCvDY;;;AD0DhB;EACI;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;;;AAGJ;EACI;;;AAGJ;EACI;EACA;EACA;;;AAGJ;EACI;;;AAGJ;EACI;;;AAGJ;EACI;;;AAGJ;EACI;;;AAGJ;EACI;;;AAGJ;EACI,kBCtGY;;;ADyGhB;EACI;;;AAGJ;EACI;;;AAGJ;EACI%22,%22file%22:%22header.css%22%7D */
