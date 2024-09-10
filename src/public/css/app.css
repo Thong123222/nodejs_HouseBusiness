@@ -7,4 +7,13 @@
   font-optical-sizing: auto;
 }
 
-/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../resources/scss/app.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAQ;AAGR;EACI;EACA;EACA;EACA;EACA%22,%22file%22:%22app.css%22%7D */
+.banner {
+  height: 700px;
+  width: 100%;
+  background-image: url("/img/banner.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../resources/scss/app.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAQ;AAGR;EACI;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA%22,%22file%22:%22app.css%22%7D */

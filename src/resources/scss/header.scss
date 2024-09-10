@@ -1,13 +1,12 @@
 @import 'variables';
 
 header, .container, .container a, .container span, .container h1 {
-    color: white;
+    color: #333;
     cursor: pointer;
 }
 
 .container {
     height: 70px;
-    background-color: $primary-color;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -59,28 +58,29 @@ header, .container, .container a, .container span, .container h1 {
 .right-side button {
     padding: 8px 15px;
     border-radius: 6px;
-    border: none;
     cursor: pointer;
 }
 
 .btn-recruitment {
-    color: #2c60b4;
+    color: #fff;
     font-weight: bold;
-    background-color: white;
+    background-color: #facc15;
+    border: none;
 }
 
 .btn-recruitment:hover {
     background-color: hsl(0, 0%, 80%);
+    color: black;
 }
 
 .btn-loggin {
-    color: #f6f6f6;
-    background-color: #1b4b97;
     font-weight: bold;
+    border: 2px solid black;
 }
 
 .btn-loggin:hover {
-    background-color: hsl(217, 69%, 15%);
+    background-color: black;
+    color: white;
 }
 
 .right-side span {
@@ -100,15 +100,15 @@ header, .container, .container a, .container span, .container h1 {
 }
 
 .drop-down li a:hover {
-    background-color: $primary-color;
+    background-color: #facc15;
 }
 
 .nav-jobs:hover a {
-    background-color: hsl(217, 68%, 39%);
+    background-color: #e5e7eb;
 }
 
 .nav-tools:hover a {
-    background-color: hsl(217, 68%, 39%);
+    background-color: #e5e7eb;
 }
 
 .left-side li:hover a i {

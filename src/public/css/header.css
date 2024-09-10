@@ -1,11 +1,10 @@
 header, .container, .container a, .container span, .container h1 {
-  color: white;
+  color: #333;
   cursor: pointer;
 }
 
 .container {
   height: 70px;
-  background-color: #3b82f6;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -57,28 +56,29 @@ header, .container, .container a, .container span, .container h1 {
 .right-side button {
   padding: 8px 15px;
   border-radius: 6px;
-  border: none;
   cursor: pointer;
 }
 
 .btn-recruitment {
-  color: #2c60b4;
+  color: #fff;
   font-weight: bold;
-  background-color: white;
+  background-color: #facc15;
+  border: none;
 }
 
 .btn-recruitment:hover {
   background-color: hsl(0, 0%, 80%);
+  color: black;
 }
 
 .btn-loggin {
-  color: #f6f6f6;
-  background-color: #1b4b97;
   font-weight: bold;
+  border: 2px solid black;
 }
 
 .btn-loggin:hover {
-  background-color: hsl(217, 69%, 15%);
+  background-color: black;
+  color: white;
 }
 
 .right-side span {
@@ -98,19 +98,19 @@ header, .container, .container a, .container span, .container h1 {
 }
 
 .drop-down li a:hover {
-  background-color: #3b82f6;
+  background-color: #facc15;
 }
 
 .nav-jobs:hover a {
-  background-color: hsl(217, 68%, 39%);
+  background-color: #e5e7eb;
 }
 
 .nav-tools:hover a {
-  background-color: hsl(217, 68%, 39%);
+  background-color: #e5e7eb;
 }
 
 .left-side li:hover a i {
   transform: rotate(180deg);
 }
 
-/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../resources/scss/header.scss%22,%22../../resources/scss/_variables.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAEA;EACI;EACA;;;AAGJ;EACI;EACA,kBCTY;EDUZ;EACA;EACA;EACA;EACA;EACA,WCdiB;;;ADiBrB;EACI;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA,OC3CY;;;AD8ChB;EACI;EACA;EACA;EACA;;;AAGJ;EACI;EACA,kBCvDY;;;AD0DhB;EACI;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;;;AAGJ;EACI;;;AAGJ;EACI;EACA;EACA;;;AAGJ;EACI;;;AAGJ;EACI;;;AAGJ;EACI;;;AAGJ;EACI;;;AAGJ;EACI;;;AAGJ;EACI,kBCtGY;;;ADyGhB;EACI;;;AAGJ;EACI;;;AAGJ;EACI%22,%22file%22:%22header.css%22%7D */
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../resources/scss/header.scss%22,%22../../resources/scss/_variables.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAEA;EACI;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA,WCbiB;;;ADgBrB;EACI;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA,OC1CY;;;AD6ChB;EACI;EACA;EACA;EACA;;;AAGJ;EACI;EACA,kBCtDY;;;ADyDhB;EACI;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;;;AAGJ;EACI;EACA;;;AAGJ;EACI;EACA;;;AAGJ;EACI;EACA;;;AAGJ;EACI;;;AAGJ;EACI;;;AAGJ;EACI;;;AAGJ;EACI;;;AAGJ;EACI;;;AAGJ;EACI;;;AAGJ;EACI;;;AAGJ;EACI%22,%22file%22:%22header.css%22%7D */
