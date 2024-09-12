@@ -25,6 +25,10 @@ app.get('/news', (req, res) => {
   res.render('news');
 });
 
+app.get('/login', (req, res) => {
+  res.render('login', { layout: 'login'});
+});
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })

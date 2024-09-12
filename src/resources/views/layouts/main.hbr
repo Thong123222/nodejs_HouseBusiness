@@ -9,8 +9,7 @@
 </head>
 <body>
     <div class="app">
-        {{!-- {{> header}} --}}
-        <div class="banner">{{> header}}</div>
+        {{> header}}
         {{{body}}}
         {{> footer}}
     </div>

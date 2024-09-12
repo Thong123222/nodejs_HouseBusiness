@@ -1,116 +1,171 @@
 @import 'variables';
 
-header, .container, .container a, .container span, .container h1 {
-    color: #333;
+.container-bar {
+    height: 48px;
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; 
+    position: relative; 
+}
+
+.container-bar img {
+    position: absolute;
+    top: 0;             /* Đảm bảo hình không vượt quá phần top */
+    right: 64%;
+    transform: translateX(-50%);
+    max-height: none;
+    width: 144px;
+}
+
+.container-bar span {
+    margin-left: 10px;
+    color: $primary-color;
+    font-weight:500;
+}
+
+.container-bar b {
+    margin-left: 10px;
+    color: black;
+}
+
+.container-bar button {
+    width: 141px;
+    height: 32px;
+    margin-left: 10px;
+    border-radius: 6px;
+    border: none;
+    font-size: 12px;
+    font-weight: bold;
+    background-image: linear-gradient(-190deg, #853aff 10%, #7158ff 100%);
+    color: white;
     cursor: pointer;
 }
 
-.container {
-    height: 70px;
+.container-navigation {
+    height: 64px;
+    width: 100%;
+    background-color: $primary-color;
+    color: #ffffff;
+    font-size: 13px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 15%;
-    font-weight: bold;
-    font-size: $font-size-primary;
+    padding: 0 15%; 
+    cursor: pointer;
 }
 
-.left-side {
-    height: 100%;
-    list-style: none;
+.left-navigation h2 {
     display: flex;
     align-items: center;
-}
-
-.left-side li {
-    display: inline-block;
-    align-items: center;
-    position: relative;
     height: 100%;
-    transition: transform 1s ease-out;
+    border-right: 1px solid #7158ff;
+    padding: 0 16px 0 0;
 }
 
-.left-side li a {
+.left-navigation a {
     height: 100%;
     display: flex;
     align-items: center;
     text-decoration: none;
-    padding: 10px 20px;
+    color: white;
+    font-weight: 600;
+    padding: 8px 20px 8px 28px;
 }
 
-.left-side li ul.drop-down li {
-    display: block;
-    color: $primary-color;
+.left-navigation, .right-navigation {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    // column-gap: 20px;
+    font-weight: $primary-font-weight;
 }
 
-.left-side li ul.drop-down {
-    width: 190px;
-    position: absolute;
-    z-index: 999;
-    display: none;
-}
-
-.left-side li:hover ul.drop-down {
-    display: block;
-    background-color: $primary-color;
-}
-
-.right-side button {
-    padding: 8px 15px;
-    border-radius: 6px;
+.left-navigation button, .right-navigation button {
+    height: 100%;
+    border: none;
+    padding: 0 10px;
+    background-color: transparent;
+    color: white;
+    font-weight: $primary-font-weight;
     cursor: pointer;
 }
 
-.btn-recruitment {
-    color: #fff;
-    font-weight: bold;
-    background-color: #facc15;
-    border: none;
+.login-user {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: center;
+    height: 100%;
+    padding: 0 16px;
+    text-align: left;
 }
 
-.btn-recruitment:hover {
-    background-color: hsl(0, 0%, 80%);
-    color: black;
+.login-recruitment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    height: 100%;
+    padding-right: 5px;
 }
 
-.btn-loggin {
-    font-weight: bold;
-    border: 2px solid black;
+.left-navigation button i, .right-navigation button i {
+    margin-left: 8px;
 }
 
-.btn-loggin:hover {
-    background-color: black;
-    color: white;
+.right-navigation img {
+    height: 25px;
+    width: 25px;
+    margin-left: 15px;
 }
 
-.right-side span {
-    margin-right: 20px;
+.login-user {
+    border-right: 1px solid #7158ff;
 }
 
-.right-side span i {
-    margin-right: 10px;
+.login-recruitment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
-.nav-jobs i, .nav-tools i {
-    margin-left: 5px;
+.login-user small {
+    font-size: 10px;
+    font-weight: 500;
 }
 
-.drop-down li a {
-    font-weight: normal;
+.login-recruitment small {
+    font-size: 11px;
+    font-weight: 600;
 }
 
-.drop-down li a:hover {
-    background-color: #facc15;
+.login-user p {
+    font-size: 14px;
 }
 
-.nav-jobs:hover a {
-    background-color: #e5e7eb;
+.login-recruitment p {
+    font-size: 10px;
+    font-weight: 600;
 }
 
-.nav-tools:hover a {
-    background-color: #e5e7eb;
+.login-recruitment img {
+    height: 25px;
+    width: 25px; 
 }
 
-.left-side li:hover a i {
-    transform: rotate(180deg);
+.group-recruitment {
+    display: flex;
+    flex-direction: column;
+}
+
+.left-navigation a:hover, 
+.left-navigation button:hover,
+.right-navigation button:hover,
+.login-user:hover,
+.login-recruitment:hover {
+    background-color: #39117a;
 }

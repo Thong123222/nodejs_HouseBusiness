@@ -5,7 +5,8 @@
   "scripts": {
     "start": "nodemon --inspect src/main.js",
     "watch": "sass --embed-source-map --watch src/resources/scss:src/public/css/ ",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "browser-sync": "browser-sync start --proxy localhost:3000 --files 'src/resources/views/**/*.hbr', 'src/public/css/**/*.css', 'src/resources/scss/**/*.scss'"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,7 @@
     "handlebars": "^4.7.8"
   },
   "devDependencies": {
+    "browser-sync": "^3.0.2",
     "morgan": "^1.10.0",
     "nodemon": "^3.1.4",
     "sass": "^1.78.0"

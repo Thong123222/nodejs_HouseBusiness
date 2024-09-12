@@ -1,0 +1,12 @@
+@import 'variables';
+
+.banner-container {
+    height: 286px;
+    width: 100%;
+}
+
+.banner-container img{
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}

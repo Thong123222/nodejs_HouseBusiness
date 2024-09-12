@@ -1,4 +1,37 @@
 <link rel="stylesheet" href="/css/header.css"/>
+<div class="container-bar"> 
+    <img src="/img/notification-bar.png" alt=""/>
+    <span>Ứng tuyển việc làm - Mọi lúc mọi nơi<b>Vieclam12h: Tìm Việc Ngay</b></span>
+    <button>Ứng tuyển ngay!</button>
+</div>
+
+<div class="container-navigation">
+    <div class="left-navigation">
+        <h2>Việclàm12h</h2>
+        <a href="">Cơ hội việc làm</a>
+        <button>Công cụ<i class="fa-solid fa-caret-down"></i></button>
+    </div>
+
+    <div class="right-navigation">
+        <button>Khu vực<i class="fa-solid fa-caret-down"></i></button>
+        <div class="login-user">
+            <small>Người tìm việc</small>
+            <p>Đăng ký/Đăng nhập</p>
+        </div>
+        <div class="login-recruitment">
+                <img src="/img/Bag-icon-img.png" alt=""/>
+                <div class="group-recruitment">
+                    <small>Dành CHO</small>
+                    <p>Nhà tuyển dụng</p>
+                </div>
+        </div>
+        <img src="/img/flag-vn.png" alt=""/>            
+    </div>
+    </div>
+</div>
+
+
+{{!-- <link rel="stylesheet" href="/css/header.css"/>
 <header class="container">
     <ul class="left-side">
         <li><a href=""><h1>Logo</h1></a></li>
@@ -22,7 +55,7 @@
     </ul>
     <ul class="right-side">
         <span><i class="fa-solid fa-phone"></i>039 9998 9998</span>
-        <button class="btn-recruitment">Nhà tuyển dụng</button>
-        <button class="btn-loggin">Đăng nhập</button>
+        <a href=""><button class="btn-recruitment">Nhà tuyển dụng</button></a>
+        <a href="http://localhost:3000/login"><button class="btn-loggin">Đăng nhập</button></a>
     </ul>
-</header>
+</header> --}}

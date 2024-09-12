@@ -1,0 +1,106 @@
+@import 'variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+h1 {
+    color: $primary-color;
+    margin-bottom: 20px;
+}
+
+a {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: right;
+    color: #ececec;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #e09f2f;    
+}
+
+.container {
+    display: flex;
+    width: 1100px;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.card-left {
+    width: 100%;
+    flex: 0.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    padding: 30px 30px;
+}
+
+.form-login {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.f-email, .f-password {
+    display: flex;
+    flex-direction: column;
+    // background-color: #ececec;
+    margin-bottom: 10px;
+}
+
+.input-email, .input-password {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 3px;
+    padding: 2% 3%;
+    border: 1px solid hwb(0 93% 20%);
+    border-radius: 5px;
+}
+
+input {
+    width: 100%;
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: $font-size-primary;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+input::placeholder {
+    color: white;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 10px;
+    background-color: $primary-color;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card-right {
+    flex: 1;
+    background-image: url('/img/img_login_card.jpg');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+

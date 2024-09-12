@@ -1,1 +1,6 @@
-<h1>Đây là body</h1>
+<link rel="stylesheet" href="/css/home.css"/>
+<div class="banner-container">
+    <img src="/img/Banner_4.jpg" alt=""/>
+</div>
+
+<h1>Body</h1>

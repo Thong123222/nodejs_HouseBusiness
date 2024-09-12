@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="card-left">
+        <form class="form-login" action="">
+            <h1>Welcome</h1>
+            <div class="f-email">
+                <label for="">Email:</label>
+                <div class="input-email">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" placeholder="Email"/>
+                </div>
+            </div>
+            <div class="f-password">
+                <label for="">Password:</label>
+                <div class="input-password">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" placeholder="Password"/>
+                </div>
+            </div>
+            <a href="#">Forgot your password?</a>
+            <button class="btn-login">Đăng nhập</button>
+        </form>
+    </div>
+
+    <div class="card-right"></div>
+</div>
