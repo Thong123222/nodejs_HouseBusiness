@@ -21,7 +21,7 @@
         <div class="login-recruitment">
                 <img src="/img/Bag-icon-img.png" alt=""/>
                 <div class="group-recruitment">
-                    <small>Dành CHO</small>
+                    <small>DÀNH CHO</small>
                     <p>Nhà tuyển dụng</p>
                 </div>
         </div>
@@ -29,6 +29,8 @@
     </div>
     </div>
 </div>
+
+
 
 
 {{!-- <link rel="stylesheet" href="/css/header.css"/>

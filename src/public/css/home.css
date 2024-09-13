@@ -1,13 +1,67 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
-.banner-container {
+.banner-show-container {
   height: 286px;
   width: 100%;
+  position: relative;
 }
 
-.banner-container img {
+.imageShow {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  width: 100%;
+}
+
+.imageShow img {
   height: 100%;
   width: 100%;
-  object-fit: fill;
+  object-fit: cover;
+  object-position: center;
 }
 
-/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../resources/scss/_variables.scss%22,%22../../resources/scss/home.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAQ;ACER;EACI;EACA;;;AAGJ;EACI;EACA;EACA%22,%22file%22:%22home.css%22%7D */
+.prev, .next {
+  position: absolute;
+  height: 32px;
+  width: 32px;
+  background-color: rgba(29, 27, 33, 0.2);
+  border-radius: 50%;
+  top: 45%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prev {
+  left: 8%;
+}
+
+.next {
+  right: 8%;
+}
+
+.prev i, .next i {
+  background-color: transparent;
+  color: white;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: #2b2a2a;
+}
+
+.slide-left {
+  transform: translateX(-100%);
+}
+
+.slide-right {
+  transform: translateX(100%);
+}
+
+.imageShow.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../resources/scss/_variables.scss%22,%22../../resources/scss/home.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAQ;ACER;EACI;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGJ;EACI;;;AAGJ;EACI;;;AAGJ;EACI;EACA;;;AAGJ;AAAA;EAEI;;;AAGJ;EACI;;;AAGJ;EACI;;;AAGJ;EACI;EACA%22,%22file%22:%22home.css%22%7D */
