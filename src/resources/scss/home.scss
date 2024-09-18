@@ -1,9 +1,10 @@
 @import 'variables';
 
 .banner-show-container {
-    height: 286px;
+    aspect-ratio: 16/2.5;
     width: 100%;
     position: relative;
+    overflow: hidden;
 }
 
 .imageShow {

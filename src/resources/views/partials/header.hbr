@@ -9,11 +9,36 @@
     <div class="left-navigation">
         <h2>Việclàm12h</h2>
         <a href="">Cơ hội việc làm</a>
-        <button>Công cụ<i class="fa-solid fa-caret-down"></i></button>
+        <div class="dropdown-container">
+            <button>Công cụ<i class="fa-solid fa-caret-down"></i></button>
+            <ul id="dropdown-menu" class="dropdown-content">
+                <li>
+                    <a href=""><img src="/img/face-smile.png" alt=""/>Trắc nghiệm tính cách</a>
+                </li>
+
+                <li>
+                    <a href=""><img src="/img/calculator.png" alt=""/>Tính lương Gross sang Net</a>
+                </li>
+
+                <li>
+                    <a href=""><img src="/img/pen-svgrepo.png" alt=""/>Trang trí CV</a>
+                </li>
+
+                <li>
+                    <a href=""><img src="/img/book-svgrepo.png" alt=""/>Cẩm nang nghề Nghiệp</a>
+                </li>
+            </ul>
+        </div>
     </div>
 
     <div class="right-navigation">
-        <button>Khu vực<i class="fa-solid fa-caret-down"></i></button>
+        <div class="dropdown-container">
+            <button>Khu vực<i class="fa-solid fa-caret-down"></i></button>
+            <ul id="dropdown-area" class="dropdown-content-area">
+                <li><a href="">Miền Nam</a></li>
+                <li><a href="">Miền Bắc</a></li>
+            </ul>
+        </div>
         <div class="login-user">
             <small>Người tìm việc</small>
             <p>Đăng ký/Đăng nhập</p>
@@ -30,34 +55,34 @@
     </div>
 </div>
 
+<script>
+    const dropdownBtn = document.querySelectorAll('.dropdown-container button');
+    const dropdownMenus = {
+        'dropdown-menu': document.getElementById('dropdown-menu'),
+        'dropdown-area': document.getElementById('dropdown-area')
+    }
 
+    function setupDropdown(button, menuId) {
+        const menu = dropdownMenus[menuId];
 
+        button.addEventListener('mouseenter', () => {
+            menu.classList.add('show');
+        })
 
-{{!-- <link rel="stylesheet" href="/css/header.css"/>
-<header class="container">
-    <ul class="left-side">
-        <li><a href=""><h1>Logo</h1></a></li>
-        <li class="nav-jobs">
-            <a href="">Việc Làm IT<i class="fa-solid fa-caret-down"></i></a>
-            <ul class="drop-down">
-                <li><a href="#">Thep cấp bậc</a></li>
-                <li><a href="">Theo địa điểm</a></li>
-                <li><a href="">Theo kỹ năng</a></li>
-            </ul>
-        </li>
-        <li><a href="">Công Ty IT</a></li>
-        <li class="nav-tools">
-            <a href="">Công Cụ<i class="fa-solid fa-caret-down"></i></a>
-            <ul class="drop-down">
-                <li><a href="">Tạo CV</a></li>
-                <li><a href="">Câu hỏi phỏng vấn</a></li>
-            </ul>
-        </li>
-        <li><a href="">Blog IT</a></li>
-    </ul>
-    <ul class="right-side">
-        <span><i class="fa-solid fa-phone"></i>039 9998 9998</span>
-        <a href=""><button class="btn-recruitment">Nhà tuyển dụng</button></a>
-        <a href="http://localhost:3000/login"><button class="btn-loggin">Đăng nhập</button></a>
-    </ul>
-</header> --}}
+        button.addEventListener('mouseleave', () => {
+            setTimeout(() => {
+                if(!menu.matches(':hover')){
+                    menu.classList.remove('show');
+                }
+            }, 100)
+        })
+
+        menu.addEventListener('mouseleave', () => {
+            menu.classList.remove('show');
+        })
+    }
+
+    setupDropdown(dropdownBtn[0], 'dropdown-menu');
+    setupDropdown(dropdownBtn[1], 'dropdown-area')
+
+</script>
