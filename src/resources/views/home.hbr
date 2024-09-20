@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="/css/home.css"/>
+
 <div class="banner-show-container">
 
     <div class="imageShow">
@@ -16,6 +17,121 @@
     <div class="prev"><i class="fa-solid fa-angle-left"></i></div>
     <div class="next"><i class="fa-solid fa-angle-right"></i></div>
 </div>
+
+<main>
+    <div class="search-container">
+        <form class="form-search-container">
+            <div class="search-content">
+                <div class="content ip-1">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input placeholder="Nhập vị trí muốn ứng tuyển" type="text"/>
+                </div>
+                <div class="content ip-2">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <input placeholder="Lọc theo nghề nghiệp" type="text"/>
+                    <i class="fa-solid fa-angle-down"></i>
+                </div>
+                <div class="content ip-3">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <input placeholder="Lọc theo tỉnh thành" type="text"/>
+                    <i class="fa-solid fa-angle-down"></i>
+                </div>
+                <button class="btn-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    Tìm việc
+                </button>
+            </div>
+        </form>
+
+
+        <div class="select-items-container">
+            <div class="items-box-container">
+                <div class="box">
+                    <img src="/img/1_category.jpg" alt=""/>
+                    <div class="job-count">
+                        <h4>4,443</h4>
+                        <small>việc</small>
+                    </div>
+                    <h5>Bán sỉ - bán lẻ - Quản lý cửa hàng</h5>
+                </div>
+                <div class="box">
+                    <img src="/img/2_category.jpg" alt=""/>
+                    <div class="job-count">
+                        <h4>4,443</h4>
+                        <small>việc</small>
+                    </div>
+                    <h5>Bán hàng - Kinh doanh</h5>
+                </div>
+                <div class="box">
+                    <img src="/img/3_category.jpg" alt=""/>
+                    <div class="job-count">
+                        <h4>4,443</h4>
+                        <small>việc</small>
+                    </div>  
+                    <h5>Marketing</h5>
+                </div>
+                <div class="box">
+                    <img src="/img/4_category.jpg" alt=""/>
+                    <div class="job-count">
+                        <h4>4,443</h4>
+                        <small>việc</small>
+                    </div>
+                    <h5>Khoa học - Kỹ thuật</h5>
+                </div>
+                <div class="box">
+                    <img src="/img/5_category.jpg" alt=""/>
+                    <div class="job-count">
+                        <h4>4,443</h4>
+                        <small>việc</small>
+                    </div>
+                    <h5>Kiểm toán</h5>
+                </div>
+                <div class="box">
+                    <img src="/img/6_category.jpg" alt=""/>
+                    <div class="job-count">
+                        <h4>4,443</h4>
+                        <small>việc</small>
+                    </div>
+                    <h5>Hành chính - Thư ký</h5>
+                </div>
+                <div class="box">
+                    <img src="/img/7_category.jpg" alt=""/>
+                    <div class="job-count">
+                        <h4>4,443</h4>
+                        <small>việc</small>
+                    </div>
+                    <h5>Kế toán</h5>
+                </div>
+                <div class="box">
+                    <img src="/img/8_category.jpg" alt=""/>
+                    <div class="job-count">
+                        <h4>4,443</h4>
+                        <small>việc</small>
+                    </div>
+                    <h5>Thực tập sinh</h5>
+                </div>
+                <div class="box">
+                    <img src="/img/9_category.jpg" alt=""/>
+                    <div class="job-count">
+                        <h4>4,443</h4>
+                        <small>việc</small>
+                    </div>
+                    <h5>Tất cả các nghành</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+
+
+
+
+
+
+
+{{!-- javascript --}}
 
 <script>
     const images = document.querySelectorAll('.imageShow')

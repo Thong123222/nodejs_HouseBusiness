@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="/css/header.css"/>
+
 <div class="container-bar"> 
     <img src="/img/notification-bar.png" alt=""/>
     <span>Ứng tuyển việc làm - Mọi lúc mọi nơi<b>Vieclam12h: Tìm Việc Ngay</b></span>
@@ -55,6 +56,9 @@
     </div>
 </div>
 
+
+
+{{!-- Javascript --}}
 <script>
     const dropdownBtn = document.querySelectorAll('.dropdown-container button');
     const dropdownMenus = {
