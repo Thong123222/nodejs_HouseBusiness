@@ -57,17 +57,23 @@ li, a {
     cursor: pointer;
 }
 
+.header-container {
+    background-color: $primary-color;
+    display: flex;
+    justify-content: center;
+}
+
 .container-navigation {
     height: 64px;
-    width: 100%;
-    background-color: $primary-color;
+    width: 1280px;
+    background-color: transparent;
     color: #ffffff;
     font-size: 13px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 15%; 
     cursor: pointer;
+    padding: 0 5px;
 }
 
 .left-navigation h2 {

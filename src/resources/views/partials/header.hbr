@@ -6,87 +6,59 @@
     <button>Ứng tuyển ngay!</button>
 </div>
 
-<div class="container-navigation">
-    <div class="left-navigation">
-        <h2>Việclàm12h</h2>
-        <a href="">Cơ hội việc làm</a>
-        <div class="dropdown-container">
-            <button>Công cụ<i class="fa-solid fa-caret-down"></i></button>
-            <ul id="dropdown-menu" class="dropdown-content">
-                <li>
-                    <a href=""><img src="/img/face-smile.png" alt=""/>Trắc nghiệm tính cách</a>
-                </li>
+<header class="header-container">
+    <div class="container-navigation">
+        <div class="left-navigation">
+            <h2>Việclàm12h</h2>
+            <a href="">Cơ hội việc làm</a>
+            <div class="dropdown-container">
+                <button>Công cụ<i class="fa-solid fa-caret-down"></i></button>
+                <ul id="dropdown-menu" class="dropdown-content">
+                    <li>
+                        <a href=""><img src="/img/face-smile.png" alt=""/>Trắc nghiệm tính cách</a>
+                    </li>
 
-                <li>
-                    <a href=""><img src="/img/calculator.png" alt=""/>Tính lương Gross sang Net</a>
-                </li>
+                    <li>
+                        <a href=""><img src="/img/calculator.png" alt=""/>Tính lương Gross sang Net</a>
+                    </li>
 
-                <li>
-                    <a href=""><img src="/img/pen-svgrepo.png" alt=""/>Trang trí CV</a>
-                </li>
+                    <li>
+                        <a href=""><img src="/img/pen-svgrepo.png" alt=""/>Trang trí CV</a>
+                    </li>
 
-                <li>
-                    <a href=""><img src="/img/book-svgrepo.png" alt=""/>Cẩm nang nghề Nghiệp</a>
-                </li>
-            </ul>
+                    <li>
+                        <a href=""><img src="/img/book-svgrepo.png" alt=""/>Cẩm nang nghề Nghiệp</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="right-navigation">
+            <div class="dropdown-container">
+                <button>Khu vực<i class="fa-solid fa-caret-down"></i></button>
+                <ul id="dropdown-area" class="dropdown-content-area">
+                    <li><a href="">Miền Nam</a></li>
+                    <li><a href="">Miền Bắc</a></li>
+                </ul>
+            </div>
+            <div id="open-modal-login" class="login-user">
+                <small>Người tìm việc</small>
+                <p>Đăng ký/Đăng nhập</p>
+            </div>
+            <div class="login-recruitment">
+                    <img src="/img/Bag-icon-img.png" alt=""/>
+                    <div class="group-recruitment">
+                        <small>DÀNH CHO</small>
+                        <p>Nhà tuyển dụng</p>
+                    </div>
+            </div>
+            <img src="/img/flag-vn.png" alt=""/>            
+        </div>
         </div>
     </div>
-
-    <div class="right-navigation">
-        <div class="dropdown-container">
-            <button>Khu vực<i class="fa-solid fa-caret-down"></i></button>
-            <ul id="dropdown-area" class="dropdown-content-area">
-                <li><a href="">Miền Nam</a></li>
-                <li><a href="">Miền Bắc</a></li>
-            </ul>
-        </div>
-        <div class="login-user">
-            <small>Người tìm việc</small>
-            <p>Đăng ký/Đăng nhập</p>
-        </div>
-        <div class="login-recruitment">
-                <img src="/img/Bag-icon-img.png" alt=""/>
-                <div class="group-recruitment">
-                    <small>DÀNH CHO</small>
-                    <p>Nhà tuyển dụng</p>
-                </div>
-        </div>
-        <img src="/img/flag-vn.png" alt=""/>            
-    </div>
-    </div>
-</div>
+</header>
 
 
 
-{{!-- Javascript --}}
-<script>
-    const dropdownBtn = document.querySelectorAll('.dropdown-container button');
-    const dropdownMenus = {
-        'dropdown-menu': document.getElementById('dropdown-menu'),
-        'dropdown-area': document.getElementById('dropdown-area')
-    }
 
-    function setupDropdown(button, menuId) {
-        const menu = dropdownMenus[menuId];
 
-        button.addEventListener('mouseenter', () => {
-            menu.classList.add('show');
-        })
-
-        button.addEventListener('mouseleave', () => {
-            setTimeout(() => {
-                if(!menu.matches(':hover')){
-                    menu.classList.remove('show');
-                }
-            }, 100)
-        })
-
-        menu.addEventListener('mouseleave', () => {
-            menu.classList.remove('show');
-        })
-    }
-
-    setupDropdown(dropdownBtn[0], 'dropdown-menu');
-    setupDropdown(dropdownBtn[1], 'dropdown-area')
-
-</script>

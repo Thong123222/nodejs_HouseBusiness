@@ -1,0 +1,302 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+.no-scroll {
+  overflow: hidden;
+}
+
+.modal-overlay {
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5); /* Nền mờ đằng sau modal */
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s; /* Hiệu ứng mờ dần */
+}
+
+.modal-content {
+  position: fixed;
+  width: 100%;
+  max-width: 850px;
+  height: 100%;
+  max-height: 500px;
+  background-color: #fafaff;
+  border-radius: 5px;
+  z-index: 20;
+  opacity: 0;
+  visibility: hidden;
+  transition: none; /* Hiệu ứng mờ dần */
+}
+
+/* Hiệu ứng mở modal */
+@keyframes openModal {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* Hiệu ứng đóng modal */
+@keyframes closeModal {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+}
+.modal-overlay.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-content.show {
+  visibility: visible;
+  animation: openModal 0.5s ease forwards;
+}
+
+.modal-content.closing {
+  animation: closeModal 0.5s ease forwards;
+}
+
+#close-modal {
+  position: absolute;
+  height: 36px;
+  width: 36px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: none;
+  right: -10px;
+  top: -8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.modal-right-content {
+  flex: 1;
+}
+
+.modal-right-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.modal-left-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-left-content h3 {
+  color: #414045;
+  font-weight: 350;
+  margin-top: 15px;
+  font-size: 17px;
+}
+
+.modal-left-content h2 {
+  color: #414045;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.btn-login-account-web {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 16px 24px;
+}
+
+.btn-login-account-web button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-login-account-web button svg {
+  margin-right: 3px;
+}
+
+#btn-login-facebook {
+  margin-bottom: 16px;
+  padding: 12px 0;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #ffffff;
+  border: 1px solid #d3d1db;
+  border-radius: 5px;
+}
+
+#btn-login-google {
+  padding: 12px 0;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #ffffff;
+  border: 1px solid #d3d1db;
+  border-radius: 5px;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 24px;
+}
+
+.line-left,
+.line-right {
+  flex: 1;
+  height: 1px;
+  background-color: #ccc; /* Màu sắc của đường kẻ */
+}
+
+.line-left {
+  margin-right: 25px; /* Khoảng cách giữa đường kẻ và văn bản */
+}
+
+.line-right {
+  margin-left: 25px; /* Khoảng cách giữa đường kẻ và văn bản */
+}
+
+.separator span {
+  color: #666; /* Màu của văn bản */
+  font-size: 14px; /* Kích thước văn bản */
+  font-weight: 550; /* Kiểu chữ đậm */
+}
+
+#form-get-email {
+  width: 100%;
+  padding: 0 24px;
+}
+
+.get-email-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.get-email-container-content {
+  display: flex;
+  margin-top: 12px;
+  padding: 0 0 8px;
+}
+
+.get-email-container-content p {
+  font-size: 12px;
+  color: #414045;
+  font-weight: 550;
+}
+
+.get-email-container-content span {
+  color: red;
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.get-email-container input {
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #24adf7;
+  outline: none;
+}
+
+.get-email-container input:focus {
+  background-color: #f8f3f0;
+  border: 1px solid #f1d1a0;
+}
+
+#errorMsg-input-email {
+  font-size: 10px;
+  color: red;
+  margin-top: 5px;
+  display: none;
+}
+
+.check-policy-container {
+  margin-top: 16px;
+  display: flex;
+  align-items: flex-start;
+}
+
+input[type=checkbox] {
+  /* Ẩn giao diện mặc định của checkbox */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Tạo kích thước và nền cho checkbox */
+  width: 50px;
+  height: 15px;
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  margin-right: 8px;
+}
+
+/* Khi checkbox được check */
+input[type=checkbox]:checked {
+  background-color: #451da0; /* Màu khi đã check */
+  border: none;
+}
+
+/* Tạo dấu check */
+input[type=checkbox]:checked::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 2px;
+  left: 6px;
+  width: 2px;
+  height: 6px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.check-policy-container-content {
+  font-size: 12px;
+  color: #757575;
+}
+
+.check-policy-container-content a {
+  color: #24adf7;
+}
+
+.check-policy-container-content p {
+  font-size: 10px;
+  color: red;
+  margin: 4px 0 0;
+  display: none;
+}
+
+#btn-login-modal {
+  width: 100%;
+  margin: 12px 0;
+  background-color: #451da0;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 1;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../resources/scss/_variables.scss%22,%22../../resources/scss/modal_login.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22;AAAQ;ACER;EACI;;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGJ;AACA;EACI;IACI;IACA;;EAEJ;IACI;IACA;;;AAIR;AACA;EACI;IACI;IACA;;EAEJ;IACI;IACA;;;AAIR;EACI;EACA;;;AAGJ;EACI;EACA;;;AAGJ;EACI;;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGJ;EACI;;;AAGJ;EACI;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;;;AAIJ;EACI;EACA;EACA;;;AAGJ;EACI;;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;;;AAGJ;AAAA;EAEI;EACA;EACA;;;AAGJ;EACI;;;AAGJ;EACI;;;AAGJ;EACI;EACA;EACA;;;AAGJ;EACI;EACA;;;AAGJ;EACI;EACA;;;AAGJ;EACI;EACA;EACA;;;AAGJ;EACI;EACA;EACA;;;AAGJ;EACI;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;;;AAGJ;EACI;EACA;;;AAGJ;EACI;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;;;AAGJ;AACA;EACI;EACA;EACA;AAEJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGJ;AACA;EACI,kBD/PY,SC+PsB;EAClC;;;AAGJ;AACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGA;EACI;EACA;;;AAGJ;EACI,ODrRmB;;;ACwRvB;EACI;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA,kBDpSY;ECqSZ;EACA;EACA;EACA;EACA;EACA;EACA;EACA%22,%22file%22:%22modal_login.css%22%7D */

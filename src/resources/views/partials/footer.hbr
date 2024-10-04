@@ -1,1 +1,88 @@
-<h1>Footer</h1>
+<link rel="stylesheet" href="/css/footer.css"/>
+<footer>
+    <div class="footer-content">
+        <div class="content-left">
+            <h3>Hotline cho Người tìm việc</h3>
+            <div class="contact-content">
+                <div>
+                    <div class="info-contact">
+                        <img src="/img/cus.jpg" alt=""/>
+                        <p>Hotline hỗ trợ miền Nam</p>
+                    </div>
+                    <h3>HCM: (+83) 9876 1111</h3>
+                </div>
+                <div>
+                    <div class="info-contact">
+                        <img src="/img/cus.jpg" alt=""/>
+                        <p>Hotline hỗ trợ miền Bắc</p>
+                    </div>
+                    <h3>HCM: (+83) 4442 3339</h3>
+                </div>               
+            </div>
+            <button class="btn-advise">Tư vấn cho người tìm việc</button>
+        </div>
+
+        <div class="content-right">
+            <h3>Hotline cho Nhà tuyển dụng</h3>
+            <div class="contact-content">
+                <div>
+                    <div class="info-contact">
+                        <img src="/img/cus2.jpg" alt=""/>
+                        <p>Hotline hỗ trợ miền Nam</p>
+                    </div>
+                    <h3>HCM: (+83) 9876 1111</h3>
+                </div>
+                <div>
+                    <div class="info-contact">
+                        <img src="/img/cus2.jpg" alt=""/>
+                        <p>Hotline hỗ trợ miền Nam</p>
+                    </div>
+                    <h3>HCM: (+83) 4442 3339</h3>
+                </div>               
+            </div>
+            <button class="btn-advise-recruiter">Tư vấn cho người tuyển dụng</button>
+        </div>
+    </div>
+
+    <div class="footer-background">
+        <div class="footer-main">
+            <div class="footer-info">
+                <h4>Về chúng tôi</h4>
+                <b>Vieclam24h.vn - Công Ty Cổ Phần Việc Làm 24h</b>
+                <p>Phòng 102, Tòa nhà 20-20B Trần Cao Vân, Phường Đa Kao, Quận 1, Thành phố Hồ Chí Minh</p>
+                <p>Chi nhánh: Tầng 4, tòa nhà Times Tower, 35 Lê Văn Lương, Thanh Xuân, Hà Nội.</p>
+                <p>Giấy phép hoạt động dịch vụ việc làm số: 4938/SLĐTBXH-GP do Sở Lao Động Thương Binh & Xã Hội TP.HCM cấp</p>
+                <p>Điện thoại: (028) 7108 2424 | (024) 7308 2424</p>
+                <p>Email hỗ trợ người tìm việc: ntv@vieclam24h.vn</p>
+                <p>Email hỗ trợ nhà tuyển dụng: ntd@vieclam24h.vn</p>
+            </div>
+
+            <div class="footer-links-social">
+                <div class="footer-links">
+                    <h4>Thông tin</h4>
+                    <ul>
+                        <li><a href="">Cẩm nang nghề nghiệp</a></li>
+                        <li><a href="">Báo giá dịch vụ</a></li>
+                        <li><a href="">Điều khoản sử dụng</a></li>
+                        <li><a href="">Quy định bảo mật</a></li>
+                        <li><a href="">Sơ đồ trang web</a></li>
+                        <li><a href="">Chính sách dữ liệu cá nhân</a></li>
+                        <li><a href="">Tuân thủ và sự đồng ý của Khách Hàng</a></li>
+                    </ul> 
+                </div>
+
+                <div class="footer-social">
+                    <h3>Kết nối với chúng tôi</h3>
+                    <div class="list-social-icon">
+                        <div class="block-icon"><a href=""><i class="fa-brands fa-facebook-f" style="color: #1877F2;"></i></a></div>
+                        <div class="block-icon"><a href=""><i class="fa-brands fa-tiktok" style="color: #000000;"></i></a></div>
+                        <div class="block-icon"><a href=""><i class="fa-brands fa-line" style="color: #63E6BE;"></i></a></div>
+                        <div class="block-icon"><a href=""><i class="fa-brands fa-youtube" style="color: #FF0000;"></i></a></div>
+                        <div class="block-icon"><a href=""><i class="fa-brands fa-instagram" style="color: #8A3AB9;"></i></a></div>
+                        <div class="block-icon"><a href=""><i class="fa-brands fa-linkedin" style="color: #0077B5;"></i></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

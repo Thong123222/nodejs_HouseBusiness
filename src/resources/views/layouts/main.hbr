@@ -13,5 +13,9 @@
         {{{body}}}
         {{> footer}}
     </div>
+
+    <script src="/js/header.js"></script>
+    <script src="/js/banner-img-ani.js"></script>
+    <script src="/js/login-modal.js"></script>
 </body>
 </html>
