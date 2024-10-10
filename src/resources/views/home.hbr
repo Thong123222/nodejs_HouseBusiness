@@ -125,8 +125,8 @@
 
 
     <!-- First Modal (Login/Email) -->
-    <div class="modal-overlay">
-        <div class="modal-content">
+    <div id="modal-main" class="modal-overlay">
+        <div id="modal-main-content" class="modal-content">
             <button id="close-modal"><i class="fa-solid fa-xmark"></i></button>
             <div class="modal-left-content">
                 <h3>Người tìm việc</h3>
@@ -171,7 +171,7 @@
                     </div>
 
                     <div class="check-policy-container">
-                        <input type="checkbox" id="agreement" checked/>
+                        <input type="checkbox" class="agreement" checked/>
                         <div class="check-policy-container-content">
                             <label for="agreement">Bằng việc nhấn nút tiếp tục, tôi đồng ý chia sẻ thông tin cá nhân 
                                 của mình với nhà tuyển dụng theo các <a href="">Điều khoản sử dụng</a>,
@@ -179,11 +179,148 @@
                                 của Việc Làm 12h
                             </label>
 
-                            <p id="Ck-msg">Vui lòng đánh dấu đồng ý với chính sách và điều khoản để tiếp tục</p>
+                            <p class="Ck-msg">Vui lòng đánh dấu đồng ý với chính sách và điều khoản để tiếp tục</p>
 
                         </div>
                     </div>
-                    <button id="btn-login-modal">Tiếp tục</button>
+                    <button id="btn-switch-to-login" class="hide-btn">Tiếp tục</button>
+                </form>
+            </div>
+
+            <div class="modal-right-content">
+                <img src="/img/Banner_login.jpg" alt=""/>
+            </div>
+        </div>
+
+        <!-- Second Modal (New modal to switch to Login Modal) -->
+        <div id="modal-Login" class="modal-login-content">
+            <button id="close-modal-login"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-left-content">
+                <h3>Người tìm việc</h3>
+                <h2>Đăng ký hoặc Đăng nhập</h2>
+                <div class="btn-login-account-web">
+                    <button id="btn-login-facebook">
+                        <svg width="25px" height="25px" viewBox="38.657999999999994 12.828 207.085 207.085" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                        <g id="SVGRepo_iconCarrier">
+                        <path d="M158.232 219.912v-94.461h31.707l4.747-36.813h-36.454V65.134c0-10.658 2.96-17.922 18.245-17.922l19.494-.009V14.278c-3.373-.447-14.944-1.449-28.406-1.449-28.106 0-47.348 17.155-47.348 48.661v27.149H88.428v36.813h31.788v94.461l38.016-.001z" fill="#4267b2"/>
+                        </g>
+                        </svg>
+                        Với Facebook
+                    </button>
+
+                    <button id="btn-login-google">
+                        <svg width="25px" height="25px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M30.0014 16.3109C30.0014 15.1598 29.9061 14.3198 29.6998 13.4487H16.2871V18.6442H24.1601C24.0014 19.9354 23.1442 21.8798 21.2394 23.1864L21.2127 23.3604L25.4536 26.58L25.7474 26.6087C28.4458 24.1665 30.0014 20.5731 30.0014 16.3109Z" fill="#4285F4"/>
+                        <path d="M16.2863 29.9998C20.1434 29.9998 23.3814 28.7553 25.7466 26.6086L21.2386 23.1863C20.0323 24.0108 18.4132 24.5863 16.2863 24.5863C12.5086 24.5863 9.30225 22.1441 8.15929 18.7686L7.99176 18.7825L3.58208 22.127L3.52441 22.2841C5.87359 26.8574 10.699 29.9998 16.2863 29.9998Z" fill="#34A853"/>
+                        <path d="M8.15964 18.769C7.85806 17.8979 7.68352 16.9645 7.68352 16.0001C7.68352 15.0356 7.85806 14.1023 8.14377 13.2312L8.13578 13.0456L3.67083 9.64746L3.52475 9.71556C2.55654 11.6134 2.00098 13.7445 2.00098 16.0001C2.00098 18.2556 2.55654 20.3867 3.52475 22.2845L8.15964 18.769Z" fill="#FBBC05"/>
+                        <path d="M16.2864 7.4133C18.9689 7.4133 20.7784 8.54885 21.8102 9.4978L25.8419 5.64C23.3658 3.38445 20.1435 2 16.2864 2C10.699 2 5.8736 5.1422 3.52441 9.71549L8.14345 13.2311C9.30229 9.85555 12.5086 7.4133 16.2864 7.4133Z" fill="#EB4335"/>
+                        </svg>
+                        Với Google
+                    </button>
+                </div>
+
+                <div class="separator">
+                    <div class="line-left"></div>
+                    <span>Hoặc tiếp tục với email</span>
+                    <div class="line-right"></div>
+                </div>
+
+                <form id="form-login-account" action="">
+                    <div class="get-email-container">
+                        <div class="get-email-container-content">
+                            <p>Địa chỉ Email</p>
+                            <span>&#42;</span>
+                        </div>
+                        <input type="text" name="" id="emailInput-to-login"/>
+                        <p id="errorMsg-input-email-to-login"></p>
+                    </div>
+
+                    <div class="get-password-to-login-container">
+                        <div class="get-password-to-login-content">
+                            <p>Mật khẩu</p>
+                            <span>&#42;</span>
+                        </div>
+                        <input type="password" name="" id="passwordInput-to-login"/>
+                        <p id="errorMsg-input-password-to-login"></p>
+                    </div>
+
+                    <div class="link-to-register-modal" id="link-to-register">
+                        <p>Đăng ký ngay!</p>
+                    </div>
+
+                    <div class="check-policy-container">
+                        <input type="checkbox" class="agreement" checked/>
+                        <div class="check-policy-container-content">
+                            <label for="agreement">Bằng việc nhấn nút tiếp tục, tôi đồng ý chia sẻ thông tin cá nhân 
+                                của mình với nhà tuyển dụng theo các <a href="">Điều khoản sử dụng</a>,
+                                <a href="">Chính sách bảo mật</a> và <a href="">Chính sách dữ liệu cá nhân</a>
+                                của Việc Làm 12h
+                            </label>
+
+                            <p class="Ck-msg">Vui lòng đánh dấu đồng ý với chính sách và điều khoản để tiếp tục</p>
+
+                        </div>
+                    </div>
+                    <button id="btn-login" class="hide-btn">Tiếp tục</button>
+                </form>
+            </div>
+
+            <div class="modal-right-content">
+                <img src="/img/Banner_login.jpg" alt=""/>
+            </div>
+        </div>
+
+        <!-- Third Modal (New modal to switch to Register Modal) -->
+        <div id="modal-register" class="modal-register-content">
+            <button id="close-modal-register"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-left-content">
+                <h4>Hoàn tất việc đăng ký với email</h4>
+                <p class="display-email"></p>
+                <h4>để trải nghiệm các tính năng của Vieclam12h.vn</h4>
+                <form id="form-get-information-user-to-register" action="">
+                    <div class="get-name-container">
+                        <div class="get-name-container-content">
+                            <p>Họ và tên</p>
+                            <span>&#42;</span>
+                        </div>
+                        <input type="text" name="" id="nameInput"/>
+                        <p id="errorMsg-input-name"></p>
+                    </div>
+
+                    <div class="get-phone-container">
+                        <div class="get-phone-container-content">
+                            <p>Số điện thoại</p>
+                            <span>&#42;</span>
+                        </div>
+                        <input type="tel" name="" id="phoneInput"/>
+                        <p id="errorMsg-input-phone"></p>
+                    </div>
+
+                    <div class="get-password-container">
+                        <div class="get-password-container-content">
+                            <p>Mật khẩu</p>
+                            <span>&#42;</span>
+                        </div>
+                        <input type="password" name="" id="passwordInput-to-register"/>
+                        <p id="errorMsg-input-password-to-register"></p>
+                    </div>
+
+                    <div class="check-policy-container">
+                        <input type="checkbox" class="agreement" checked/>
+                        <div class="check-policy-container-content">
+                            <label for="agreement">Bằng việc nhấn nút tiếp tục, tôi đồng ý chia sẻ thông tin cá nhân 
+                                của mình với nhà tuyển dụng theo các <a href="">Điều khoản sử dụng</a>,
+                                <a href="">Chính sách bảo mật</a> và <a href="">Chính sách dữ liệu cá nhân</a>
+                                của Việc Làm 12h
+                            </label>
+
+                            <p class="Ck-msg">Vui lòng đánh dấu đồng ý với chính sách và điều khoản để tiếp tục</p>
+
+                        </div>
+                    </div>
+                    <button id="btn-register" class="hide-btn">Tiếp tục</button>
                 </form>
             </div>
 
@@ -193,10 +330,6 @@
         </div>
     </div>
 
-    <!-- Second Modal (New modal to switch to Register Modal) -->
-    <div class="secondModal-overplay">
-
-    </div>
 
 </main>
 

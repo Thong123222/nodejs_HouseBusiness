@@ -19,7 +19,8 @@
   transition: opacity 0.3s, visibility 0.3s; /* Hiệu ứng mờ dần */
 }
 
-.modal-content {
+.modal-content,
+.modal-register-content {
   position: fixed;
   width: 100%;
   max-width: 850px;
@@ -65,11 +66,23 @@
   animation: openModal 0.5s ease forwards;
 }
 
+.modal-register-content.show,
+.modal-login-content.show {
+  visibility: visible;
+  opacity: 1;
+}
+
 .modal-content.closing {
   animation: closeModal 0.5s ease forwards;
 }
 
-#close-modal {
+.modal-content.hide {
+  display: none;
+}
+
+#close-modal,
+#close-modal-register,
+#close-modal-login {
   position: absolute;
   height: 36px;
   width: 36px;
@@ -113,6 +126,12 @@
   color: #414045;
   font-weight: 600;
   font-size: 20px;
+}
+
+.modal-left-content h4 {
+  color: #414045;
+  font-size: 13px;
+  font-weight: 600;
 }
 
 .btn-login-account-web {
@@ -180,50 +199,81 @@
   font-weight: 550; /* Kiểu chữ đậm */
 }
 
-#form-get-email {
+#form-get-email,
+#form-get-information-user-to-register,
+#form-login-account {
   width: 100%;
   padding: 0 24px;
 }
 
-.get-email-container {
+.get-email-container,
+.get-name-container,
+.get-phone-container,
+.get-password-container,
+.get-password-to-login-container {
   display: flex;
   flex-direction: column;
 }
 
-.get-email-container-content {
+.get-email-container-content,
+.get-name-container-content,
+.get-phone-container-content,
+.get-password-container-content,
+.get-password-to-login-content {
   display: flex;
   margin-top: 12px;
   padding: 0 0 8px;
 }
 
-.get-email-container-content p {
+.get-email-container-content p,
+.get-name-container-content p,
+.get-phone-container-content p,
+.get-password-container-content p,
+.get-password-to-login-content p {
   font-size: 12px;
   color: #414045;
   font-weight: 550;
 }
 
-.get-email-container-content span {
+.get-email-container-content span,
+.get-name-container-content span,
+.get-phone-container-content span,
+.get-password-container-content span,
+.get-password-to-login-content span {
   color: red;
   font-size: 12px;
-  margin-left: 5px;
+  margin-left: 3px;
 }
 
-.get-email-container input {
+.get-email-container input,
+.get-name-container input,
+.get-phone-container input,
+.get-password-container input,
+.get-password-to-login-container input {
   padding: 12px;
   border-radius: 5px;
   border: 1px solid #24adf7;
   outline: none;
 }
 
-.get-email-container input:focus {
+.get-email-container input:focus,
+.get-name-container input:focus,
+.get-phone-container input:focus,
+.get-password-container input:focus,
+.get-password-to-login-container input:focus {
   background-color: #f8f3f0;
   border: 1px solid #f1d1a0;
 }
 
-#errorMsg-input-email {
+#errorMsg-input-email,
+#errorMsg-input-name,
+#errorMsg-input-phone,
+#errorMsg-input-password-to-register,
+#errorMsg-input-password-to-login,
+#errorMsg-input-email-to-login {
   font-size: 10px;
   color: red;
-  margin-top: 5px;
+  margin-top: 3px;
   display: none;
 }
 
@@ -285,7 +335,9 @@ input[type=checkbox]:checked::after {
   display: none;
 }
 
-#btn-login-modal {
+#btn-switch-to-login,
+#btn-register,
+#btn-login {
   width: 100%;
   margin: 12px 0;
   background-color: #451da0;
@@ -299,4 +351,36 @@ input[type=checkbox]:checked::after {
   opacity: 1;
 }
 
-/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../resources/scss/_variables.scss%22,%22../../resources/scss/modal_login.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22;AAAQ;ACER;EACI;;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGJ;AACA;EACI;IACI;IACA;;EAEJ;IACI;IACA;;;AAIR;AACA;EACI;IACI;IACA;;EAEJ;IACI;IACA;;;AAIR;EACI;EACA;;;AAGJ;EACI;EACA;;;AAGJ;EACI;;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGJ;EACI;;;AAGJ;EACI;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;;;AAIJ;EACI;EACA;EACA;;;AAGJ;EACI;;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;;;AAGJ;AAAA;EAEI;EACA;EACA;;;AAGJ;EACI;;;AAGJ;EACI;;;AAGJ;EACI;EACA;EACA;;;AAGJ;EACI;EACA;;;AAGJ;EACI;EACA;;;AAGJ;EACI;EACA;EACA;;;AAGJ;EACI;EACA;EACA;;;AAGJ;EACI;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;;;AAGJ;EACI;EACA;;;AAGJ;EACI;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;;;AAGJ;AACA;EACI;EACA;EACA;AAEJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGJ;AACA;EACI,kBD/PY,SC+PsB;EAClC;;;AAGJ;AACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGA;EACI;EACA;;;AAGJ;EACI,ODrRmB;;;ACwRvB;EACI;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA,kBDpSY;ECqSZ;EACA;EACA;EACA;EACA;EACA;EACA;EACA%22,%22file%22:%22modal_login.css%22%7D */
+.display-email {
+  color: #451da0;
+  font-size: 17px;
+  font-weight: 700;
+  margin: 5px 0;
+}
+
+.modal-login-content {
+  position: fixed;
+  width: 100%;
+  max-width: 880px;
+  height: 100%;
+  max-height: 650px;
+  background-color: #fafaff;
+  border-radius: 5px;
+  z-index: 20;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.link-to-register-modal {
+  text-align: right;
+  margin-top: 5px;
+}
+
+.link-to-register-modal p {
+  font-size: 12px;
+  color: #2c95ff;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../resources/scss/_variables.scss%22,%22../../resources/scss/modal_login.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22;AAAQ;ACER;EACI;;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGJ;AAAA;EAEI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGJ;AACA;EACI;IACI;IACA;;EAEJ;IACI;IACA;;;AAIR;AACA;EACI;IACI;IACA;;EAEJ;IACI;IACA;;;AAIR;EACI;EACA;;;AAGJ;EACI;EACA;;;AAGJ;AAAA;EAEI;EACA;;;AAGJ;EACI;;;AAGJ;EACI;;;AAGJ;AAAA;AAAA;EAGI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGJ;EACI;;;AAGJ;EACI;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;;;AAGJ;EACI;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;;;AAIJ;EACI;EACA;EACA;;;AAGJ;EACI;;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;;;AAGJ;AAAA;EAEI;EACA;EACA;;;AAGJ;EACI;;;AAGJ;EACI;;;AAGJ;EACI;EACA;EACA;;;AAGJ;AAAA;AAAA;EAGI;EACA;;;AAGJ;AAAA;AAAA;AAAA;AAAA;EAKI;EACA;;;AAGJ;AAAA;AAAA;AAAA;AAAA;EAKI;EACA;EACA;;;AAGJ;AAAA;AAAA;AAAA;AAAA;EAKI;EACA;EACA;;;AAGJ;AAAA;AAAA;AAAA;AAAA;EAKI;EACA;EACA;;;AAGJ;AAAA;AAAA;AAAA;AAAA;EAKI;EACA;EACA;EACA;;;AAGJ;AAAA;AAAA;AAAA;AAAA;EAKI;EACA;;;AAGJ;AAAA;AAAA;AAAA;AAAA;AAAA;EAMI;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;;;AAGJ;AACA;EACI;EACA;EACA;AAEJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGJ;AACA;EACI,kBDjTY,SCiTsB;EAClC;;;AAGJ;AACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGA;EACI;EACA;;;AAGJ;EACI,ODvUmB;;;AC0UvB;EACI;EACA;EACA;EACA;;;AAGJ;AAAA;AAAA;EAGI;EACA;EACA,kBDxVY;ECyVZ;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGJ;EACI,ODpWY;ECqWZ;EACA;EACA;;;AAIJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA;;;AAGJ;EACI;EACA;EACA;EACA%22,%22file%22:%22modal_login.css%22%7D */
