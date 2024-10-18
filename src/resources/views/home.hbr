@@ -263,7 +263,7 @@
 
                         </div>
                     </div>
-                    <button id="btn-login" class="hide-btn">Tiếp tục</button>
+                    <button id="btn-login" class="hide-btn">Đăng nhập</button>
                 </form>
             </div>
 
@@ -279,13 +279,17 @@
                 <h4>Hoàn tất việc đăng ký với email</h4>
                 <p class="display-email"></p>
                 <h4>để trải nghiệm các tính năng của Vieclam12h.vn</h4>
-                <form id="form-get-information-user-to-register" action="">
+                <form method="POST" id="form-get-information-user-to-register" action="">
+
+                    <!-- Hidden input to hold the email -->
+                    <input type="hidden" name="email" id="emailInput-to-register">
+
                     <div class="get-name-container">
                         <div class="get-name-container-content">
                             <p>Họ và tên</p>
                             <span>&#42;</span>
                         </div>
-                        <input type="text" name="" id="nameInput"/>
+                        <input type="text" name="name" id="nameInput"/>
                         <p id="errorMsg-input-name"></p>
                     </div>
 
@@ -294,7 +298,7 @@
                             <p>Số điện thoại</p>
                             <span>&#42;</span>
                         </div>
-                        <input type="tel" name="" id="phoneInput"/>
+                        <input type="tel" name="phone" id="phoneInput"/>
                         <p id="errorMsg-input-phone"></p>
                     </div>
 
@@ -303,7 +307,7 @@
                             <p>Mật khẩu</p>
                             <span>&#42;</span>
                         </div>
-                        <input type="password" name="" id="passwordInput-to-register"/>
+                        <input type="password" name="password" id="passwordInput-to-register"/>
                         <p id="errorMsg-input-password-to-register"></p>
                     </div>
 
@@ -320,7 +324,7 @@
 
                         </div>
                     </div>
-                    <button id="btn-register" class="hide-btn">Tiếp tục</button>
+                    <button type="submit" id="btn-register" class="hide-btn">Đăng ký</button>
                 </form>
             </div>
 

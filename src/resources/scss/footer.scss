@@ -180,5 +180,44 @@ footer {
     text-decoration:underline;
 }
 
+.footer-img-mobile {
+    grid-row: 1;
+    margin-top: 10px;
+}
+.footer-img-mobile img {
+    width: 150px;
+    height: auto;
+}
+
+.footer-mobile-apps {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Changed from center to flex-start */
+    margin-top: 20px;
+}
+
+.footer-mobile-stores {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-img-mobile {
+    margin-top: 10px;
+}
+
+.footer-img-mobile img {
+    width: 100px;
+    height: auto;
+}
+
+.qr-code {
+    margin-top: 10px; 
+}
+
+.qr-code img {
+    width: 100px;
+    height: auto;
+}
+
 
 

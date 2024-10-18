@@ -19,8 +19,8 @@ const emailInput = document.getElementById('emailInput');
 const emailLogin = document.getElementById('emailInput-to-login');
 const btnLogin = document.getElementById('btn-login');
 
-console.log('linkToRegister')
 
+ 
 // Kiểm tra xem các phần tử có tồn tại không
 function elementExists(element) {
     return element !== null;
@@ -68,7 +68,9 @@ function linkToRegisterModal(event) {
     toggleModal(modalLoginContent, false);
     toggleModal(modalRegisterContent, true);
     displayEmail.innerHTML = emailLogin.value;
+    document.getElementById('emailInput-to-register').value = emailLogin.value;
 }
+
 
 // Xử lý checkbox thay đổi
 function handleCheckboxChange() {
@@ -119,6 +121,18 @@ function validateField(rule) {
     }
 }
 
+
+// Hàm báo lỗi khi click button
+function validateCurrentFields(activeModal) {
+    const currentFields = Array.from(activeModal.querySelectorAll('input'))
+
+    validateRules.forEach((rule) => {
+        if(currentFields.some(field => field.id === rule.inputField)){
+            validateField(rule);
+        }
+    });
+}
+
 // Hiển thị lỗi
 function showError(inputEl, errorEl, message) {
     errorEl.style.display = 'block';
@@ -142,6 +156,8 @@ function addInputEventListeners() {
     });
 }
 
+
+
 // Gọi hàm để gán sự kiện sau khi DOM đã tải xong
 window.onload = () => {
     addInputEventListeners();
@@ -150,8 +166,45 @@ window.onload = () => {
     document.getElementById('close-modal-register')?.addEventListener('click', closeModal);
     document.getElementById('close-modal-login')?.addEventListener('click', closeModal);
 
-    btnSwitchLogin?.addEventListener('click', switchToLoginModal);
-    linkToRegister?.addEventListener('click', linkToRegisterModal);
+    btnSwitchLogin?.addEventListener('click', (event) => {
+        const emailValue = emailInput.value.trim();
+        const emailvalid = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(emailValue)
+        if(emailValue === '' || !emailvalid) {
+            event.preventDefault();
+            validateCurrentFields(modalMainContent) // Gọi hàm kiểm tra và hiển thị lỗi
+        }else {
+            switchToLoginModal(event);
+        }
+    });
+
+    linkToRegister?.addEventListener('click', (event) => {
+        const emailValue = emailLogin.value.trim();
+        const emailvalid = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(emailValue)
+        if(emailValue === '' || !emailvalid) {
+            event.preventDefault();
+        }else {
+            linkToRegisterModal(event);
+        }
+    });
+
+    btnRegister?.addEventListener('click', (event) => {
+        
+        const nameInput = document.getElementById('nameInput').value.trim();
+        const phoneInput = document.getElementById('phoneInput').value.trim();
+        const passwordInputToRegister = document.getElementById('passwordInput-to-register').value.trim();
+        
+        // Check if the fields are valid
+        const isNameValid = nameInput.length >= 5; 
+        const isPhoneValid = /^[0-9]{10,11}$/.test(phoneInput);
+        const isPasswordValid = passwordInputToRegister.length >= 8;
+    
+        if (!isNameValid || !isPhoneValid || !isPasswordValid || nameInput === ''
+            || phoneInput === '' || passwordInputToRegister === '') {
+            event.preventDefault(); 
+            validateCurrentFields(modalRegisterContent); // Call your validation function
+        }
+    })
+
     checkbox?.forEach((check) => check.addEventListener('change', handleCheckboxChange));
 };
 
@@ -202,7 +255,3 @@ const validateRules = [
         checkEmpty: 'Vui lòng nhập mật khẩu.'
     }
 ]
-
-
-
-
